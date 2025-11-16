@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Awesome Website - Free Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        /* Navigation */
+        nav {
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #667eea;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #764ba2;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 1rem;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 10px;
+            margin-bottom: 3rem;
+        }
+        
+        .hero h2 {
+            font-size: 2rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        /* Features Section */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+        
+        /* About Section */
+        .about {
+            background: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .about h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .about p {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 1rem;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .contact h2 {
+            margin-bottom: 1rem;
+        }
+        
+        .contact-form {
+            max-width: 500px;
+            margin: 2rem auto 0;
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .submit-btn {
+            background: white;
+            color: #667eea;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .submit-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Footer */
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+            
+            nav ul li {
+                margin: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🚀 My Awesome Website</h1>
+        <p>Welcome to my first FREE published website!</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <section id="home" class="hero">
+            <h2>Build Your Dreams Online</h2>
+            <p>Create amazing websites without spending a rupee. Start your digital journey today!</p>
+            <a href="#contact" class="btn">Get Started Free</a>
+        </section>
+        
+        <section id="features">
+            <h2 style="text-align: center; color: #667eea; margin-bottom: 2rem;">Amazing Features</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Lightning Fast</h3>
+                    <p>Super fast loading speed for better user experience</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Mobile Friendly</h3>
+                    <p>Looks perfect on all devices - phones, tablets, desktops</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Beautiful Design</h3>
+                    <p>Modern and attractive design that stands out</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Secure</h3>
+                    <p>Built with security best practices in mind</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="about" class="about">
+            <h2>About This Website</h2>
+            <p>This is a demonstration website built completely FREE! No hosting costs, no domain costs (optional), and no hidden fees. This website is responsive, fast, and looks professional.</p>
+            <p>You can customize this template for your business, portfolio, blog, or any other purpose. The possibilities are endless!</p>
+        </section>
+        
+        <section id="contact" class="contact">
+            <h2>Get In Touch</h2>
+            <p>Have questions? Feel free to reach out!</p>
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 My Awesome Website. Made with ❤️ | Published FREE on Netlify</p>
+    </footer>
+    
+    <script>
+        function handleSubmit(e) {
+            e.preventDefault();
+            alert('Thank you for your message! This is a demo form.');
+        }
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
